@@ -1,6 +1,6 @@
 class StringPali{
     public static void main(String[] args) {
-        // String a = ")(@tha234yoli@()";
+        
         // System.out.println(withoutbuildin(a));
         // System.out.println(Stringbuilder(a));
         // System.out.println(Stringbuffer(a));
@@ -8,9 +8,9 @@ class StringPali{
         // System.out.println(SubObj(a));
         // System.out.println(BufferSub(a));
         // System.out.println(BuilderSub(a));
-        String x = "i love  java      programming";
+        String x = "i love  java      pubg";
         // StrNUm(x);
-        elavu(x);
+        pg(x);
     }
 
     static String withoutbuildin(String a) {
@@ -97,7 +97,7 @@ class StringPali{
     System.out.println(result);
 }
 
-    static void elavu(String x) {
+    static void pg(String x) {
         int n = x.length();
         String revname = "";
         boolean isWord = false; 
