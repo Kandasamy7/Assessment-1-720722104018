@@ -73,42 +73,27 @@ class StringPali{
    }
    static void StrNUm(String x) {
     int n = x.length();
-    String ch = "";  // String to hold the current character(s)
-    int digit = 0;    // Variable to hold the digit(s)
-    String result = "";  // String to store the final result
-    StringBuilder numberBuilder = new StringBuilder();  // To store digits
-
+    String ch = "";  
+    int digit = 0;  
+    String result = "";
+    StringBuilder numberBuilder = new StringBuilder();
     for (int i = 0; i < n; i++) {
         char currentChar = x.charAt(i);
-        
         if (Character.isLetter(currentChar)) {
-            // If the character is a letter, add it to `ch`
             ch = ch + currentChar;
         } else if (Character.isDigit(currentChar)) {
-            // If the character is a digit, store it in the numberBuilder
             numberBuilder.append(currentChar);
-            
-            // If the next character is not a digit or we are at the end of the string
             if (i == n - 1 || !Character.isDigit(x.charAt(i + 1))) {
-                // Convert the accumulated digits in numberBuilder to an integer
                 digit = Integer.parseInt(numberBuilder.toString());
-                
-                // Repeat the current value of `ch` `digit` times and append to result
                 for (int j = 0; j < digit; j++) {
                     result = result + ch;
                 }
-                
-                // Reset the numberBuilder and `ch`
-                numberBuilder.setLength(0); // Clear the builder for next digit(s)
-                ch = "";  // Reset `ch` after appending repeated character(s)
+                numberBuilder.setLength(0); 
+                ch = "";  
             }
         }
     }
-    
-    // Append any remaining characters (letters) to the result
     result = result + ch;
-    
-    // Print the final result
     System.out.println(result);
 }
 
